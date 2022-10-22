@@ -68,7 +68,12 @@ for (i=0;i<=5;i++)
 //3. La inicialización con valores de cero para un vector llamado “lap” que contiene
 //200 elementos numéricos reales.
 //lap[200],
-printf(" 3. \n  ");
+printf("\n 3. \n  ");
+    for (i=1;i<=200;i++)
+    {
+        lap[i]= 0;
+    }
+    printf("%d \n", lap[99]);
 printf("\n");
 printf(" 4. \n  ");
 //4. Codifique un programa que defina un vector de 8 elementos y los llene con
@@ -125,5 +130,3 @@ for (i=1;i<=18;i++)
 printf("\n");
 
 }
-
-
