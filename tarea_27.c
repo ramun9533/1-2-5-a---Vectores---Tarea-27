@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-int alfa[6],  lap[200], multiplosDe13[8], veinte6Elementos[26], verde[18], viceversa[10], viceversa1[10];
+int alfa[6],  lap[200], multiplosDe13[8], veinte6Elementos[26], verde[18], viceversa[10], viceversa2[20], viceversa1[10];
 int karatePesos, promedioPesos, acum, x, y, xy, m, i, j, funcion, estatura[45], calificaciones[11], cuadrado[32];
 float beta[6], azul[6]; //lavariable azul no especifica cuantos elementos se agregaran
 char caracter;
@@ -86,6 +86,7 @@ printf(" 4. \n  ");
 
     }
 printf("\n");
+printf(" 5. \n  ");
 //5. Codifique un programa que defina un vector de 26 elementos, en los cuales
 //almacene como contenido el valor del subíndice de cada elemento; muestre en
 //pantalla sus resultados.
@@ -97,7 +98,7 @@ for (i=0;i<=25;i++)
 
     }
 printf("\n");
-
+printf(" 6. \n  ");
 //6. Codifique un programa que defina un vector de 18 elementos numéricos
 //enteros, llamado verde que sea inicializado con el número 3 y solo en los
 //elementos con subíndice par escriba el número del subíndice.
@@ -111,6 +112,7 @@ for (i=1;i<=18;i++)
 
     }
 printf("\n");
+printf(" 7. \n  ");
 //7. Codifique un programa que defina un vector llamado azul, de elementos
 //numéricos flotantes, inicializado con valores de 9 en los elementos par y 11 en
 //los impares. Muestre el contenido y en los subíndices que sean múltiplos de 4
@@ -118,15 +120,103 @@ printf("\n");
 //azul[6]
 for (i=1;i<=18;i++)
     {
-        
             if (i%2==0)
             azul[i]= 9;
             if (!(i%2==0))
             azul[i]= 11;
             if (i%4==0)
             printf("\t subindice %d = %.2f  \n",i , azul[i]);
-
     }
 printf("\n");
+//8. Codifique la definición del vector, inicialización y entrada de datos
+//proporcionada por el usuario, en la que se almacenen la estatura de 45
+//alumnos de un salón de clases de primaria.
+//estatura[45]
+printf(" 8. \n  ");
+//for (i=1;i<=45;i++)
+  //  {
+    //        printf("\t Proporcioneme la estatura del individuo %d en centimetros\n", i);
+      //      scanf("%d", &estatura[i]);
+    //}
+//Se desactivo la actividad #8 porque quita mucho tiempo
+printf("\n");
+printf(" 9. \n  ");
+//9. Codifique un programa que capture el promedio de calificaciones de un alumno
+//que lleva 11 materias, y las muestre en orden inverso a como fueron tecleadas.
+//calificaciones[11]
+for (i=0;i<=10;i++)
+    {
+            printf("\t Proporcioneme la calificacion de la materia %d en enteros\n", i+1);
+            scanf("%d", &calificaciones[i]);
+    }
+for (i=10;i>=0;i--)
+    {
+            printf("\t La a calificacion de la materia %d en enteros %d\n", i+1, calificaciones[i]);
+    }
+printf("\n");
+//10. Codifique un programa que lea 2 vectores de 10 elementos e intercambie el
+//primer elemento del primer vector con el último elemento del segundo vector
+//y viceversa, mostrando paso a paso cada uno de los cambios efectuados.
+//viceversa[10], viceversa1[10]; viceversa2[20]
+
+printf(" 10. \n  ");
+j=0;
+    for (i=0;i<10;i++)      //captura datos de vector1
+        {
+            printf("Proporsiona un elemento para el vector1\n");
+            scanf("%d",&viceversa[i]);
+            viceversa2[j]=viceversa[i]; // j del 0 al 9
+            //printf("primer vector \n addres  dato");
+            //printf("%d  %d \n",i , viceversa);
+            j++;
+            //printf("%d  %d \n",i, viceversa[i]);
+        }
+        printf("primer vector1 \n addres     dato\n"); //cabezera de vector1
+        for (i=0;i<10;i++)      //impresion de tabla vector1
+        {
+
+            printf("%d      %d \n",i , viceversa[i]);
+            //printf("%d  %d \n",i, viceversa[i]);
+        }
+
+    for (i=0;i<10;i++)      //captura datos de vector2
+        {
+            printf("Proporsiona un elemento para el vector2\n");
+            scanf("%d",&viceversa1[i]);
+            viceversa2[j]=viceversa1[i]; // j del 10 al 19
+            //printf("%d  %d \n",i, viceversa1);
+            j++;
+            //viceversa1[i]=i;
+            //printf("%d  %d \n",i, viceversa1[i]);
+        }
+printf("primer vector2 \n addres     dato\n"); //cabezera de vector2
+        for (i=0;i<10;i++)      //impresion de tabla vector2
+        {
+
+            printf("%d      %d \n",i , viceversa1[i]);
+            //printf("%d  %d \n",i, viceversa[i]);
+        }
+
+printf("impresion de tabla inversa del vector1 \n addres     dato\n"); //cabezera de vector invers
+    for (i=1;i<=10;i++)      //impresion de tabla inversa del vector2 al vector1
+        {
+            viceversa[i]=viceversa2[j];
+            printf("%d      %d \n",i , viceversa[i]);
+            //viceversa2[j]=viceversa1[i];
+            j--;
+        }
+
+printf("impresion de tabla inversa del vector2 \n addres     dato\n"); //cabezera de vector invers
+for (i=1;i<=10;i++)
+        {
+            viceversa1[i]=viceversa2[j];
+            printf("%d  %d \n",i ,viceversa1[i]);
+            //viceversa2[j]=viceversa1[i];
+            j--;
+            //viceversa1[i]=i;
+            //printf("%d  %d \n",i, viceversa1[i]);
+        }
+printf("\n");
+
 
 }
