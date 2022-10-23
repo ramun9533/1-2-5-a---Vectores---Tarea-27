@@ -2,8 +2,8 @@
 void main()
 {
 int alfa[6],  lap[200], multiplosDe13[8], veinte6Elementos[26], verde[18], viceversa[10], viceversa2[20], viceversa1[10];
-int  acum, x, y, xy, m, i, j, funcion, estatura[45], calificaciones[11], cuadrado[32];
-float promedioPesos, karatePesos[35], beta[6], azul[6]; //lavariable azul no especifica cuantos elementos se agregaran
+int  acum, m, i, j, estatura[45], calificaciones[11], cuadrado[32];
+float promedioPesos, karatePesos[35], beta[6], azul[6], funcion[8], x, y, xy; //lavariable azul no especifica cuantos elementos se agregaran
 char caracter;
 
 //1. La declaración de un vector llamado “alfa” de 6 elementos numéricos enteros,
@@ -233,7 +233,7 @@ printf("\n");
 //deberá de mostrar 5 columnas en las cuales se visualizarán los pesos de los
 //alumnos al final mostrar una línea con el promedio de peso de todos ellos.
 // promedioPesos, m, i ,j, karatePesos[35]
-// printf(" 12. \n  ");
+printf(" 12. \n  ");
 // for (i=0;i<35;i++)
 //     {
 //             printf("Proporsioname tu peso en kilos\n");
@@ -250,4 +250,24 @@ printf("\n");
 //             m++;
 //         }
 //     }
+
+// 13. Codifique un programa que solicite al usuario que teclee el valor de X y de Y. y
+// que almacene en un vector de 8 elementos numéricos flotantes, en cada
+// elemento el resultados de la ecuación F= 5x + 2y2 - 3m Donde M es el numero
+// del subíndice del vector. Muestre resultados.
+// funcion[8],m, x, y, xy;   funcion=5x+2(y*y)-3m
+printf(" 13. \n  ");
+printf("Proporsioname el valor de X\n");
+scanf("%f",&x);
+printf("Proporsioname el valor de Y\n");
+scanf("%f",&y);
+m=0;
+for (i=0;i<8;i++)
+    {
+            funcion[i]=5*x+2*(y*y)-3*m;
+            printf("%.2f \n", funcion[i]);
+            m++;
+
+    }
+
 }
