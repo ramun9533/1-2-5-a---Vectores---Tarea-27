@@ -198,18 +198,18 @@ printf("primer vector2 \n addres     dato\n"); //cabezera de vector2
         }
 
 printf("impresion de tabla inversa del vector1 \n addres     dato\n"); //cabezera de vector invers
-    for (i=1;i<=10;i++)      //impresion de tabla inversa del vector2 al vector1
+    for (i=0;i<10;i++)      //impresion de tabla inversa del vector2 al vector1
         {
-            viceversa[i]=viceversa2[j];
+            viceversa[i]=viceversa2[j-1]; //Compensasion de desfase
             printf("%d      %d \n",i , viceversa[i]);
             //viceversa2[j]=viceversa1[i];
             j--;
         }
 
 printf("impresion de tabla inversa del vector2 \n addres     dato\n"); //cabezera de vector invers
-for (i=1;i<=10;i++)
+for (i=0;i<10;i++)
         {
-            viceversa1[i]=viceversa2[j];
+            viceversa1[i]=viceversa2[j-1]; //Compensasion de desfase
             printf("%d  %d \n",i ,viceversa1[i]);
             //viceversa2[j]=viceversa1[i];
             j--;
